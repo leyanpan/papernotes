@@ -7,6 +7,7 @@ The paper trains a Graph Neural Network (GNN) to predict the polarity of variabl
 ## Model Architecture
 
 **Graph Encoding** A SAT formula is encoded into a graph containing one node for each clause $c_i$, one node for each variable $v_i$, and one dummy node that connects all clause nodes $m$. If a variable `v` appears in clause `c`, then there is an edge between the variable node and the clause node.
+
 ![SAT Graph Representation](../imgs/sat_graph.png)
 
 Edge Features: 0 for meta-edge between dummy node and clause node, 1 for edge between variable and clause node with positive polarity, -1 for edge between variable and clause node with negative polarity.
